@@ -1,0 +1,140 @@
+*,*:after,*:before{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.container-star{
+    background-image: linear-gradient(to bottom,#292256 0%, #8446cf 70%, #a871d6 100%);
+}
+.container-star:after{
+    background: radial-gradient(ellipse at center,rgba(255,255,255,0) 0%, rgba(255,255,255,0)40%, rgba(15,10,38,0.2)100%);
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.star-1{
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ffff;
+    -webkit-animation: twinkle 5s infinite ease-in-out;
+    animation: twinkle 5s infinite ease-in-out ;
+}
+.star-1:after{
+    height: 100%;
+    width: 100%;
+    transform: rotate(90deg);
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.star-1:before{
+    background: radial-gradient(ellipse at center,rgba(255,255,255,0.5)0% rgba(255,255,255,0.5)60%, rgba(255,255,255,0.5)100%);
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    top:-20%;
+    left:-50%;
+}
+.star-1:nth-of-type(1){
+    top: 82vh;
+    left: 60vw;
+    width: 7px;
+    height: 2.333333px;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+.star-1:nth-of-type(1):before{
+    width: 14px;
+    height: 14px;
+    top: -250%;
+}
+.star-1:nth-of-type(2){
+    top: 36vh;
+    left: 30vw;
+    width: 5px;
+    height: 1.666666667px;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+}
+.star-1:nth-of-type(2):before{
+    width: 10px;
+    height: 10px;
+    top: -250%;
+}
+.wing-left-top{
+    border-bottom: 20px solid #7979a8;
+    transform: translate3d(0,0,0) rotateX(-60deg);
+    -webkit-animation: wingLeftTop 1.3s cubic-bezier(0.45,0,0.5,0.95)infinite;
+        animation: wingLeftTop 1.3s cubic-bezier(0.45,0,0.5,0.95) infinite;;
+}
+.bird-anim:nth-child(1){
+    -webkit-animation: bird1 30s linear infinite forwards;
+    animation: bird1 30s linear infinite forwards;
+}
+.bird-anim:nth-child(2){
+    -webkit-animation: bird2 30s linear infinite forwards;
+    animation: bird2 30s linear infinite forwards;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    z-index: -1;
+}
+.bird-anim:nth-child(3){
+    -webkit-animation: bird3 30s linear infinite forwards;
+    animation: bird3 30s linear infinite forwards;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+.bird-anim:nth-child(4){
+    -webkit-animation: bird4 30s linear infinite forwards;
+    animation: bird4 30s linear infinite forwards;
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+}
+@-webkit-keyframes bird6{
+    0%,10%{
+        transform: translate3d(-100vw,20vh,-500px) rotateY(15deg) rotateX(10deg);
+    }
+    100%{
+        transform: translate3d(100vw,40vh,-800px) rotateY(5deg) rotateX(10deg);
+    }
+}
+@keyframes bird6{
+    0%,10%{
+        transform: translate3d(-100vw,20vh,-500px) rotateY(15deg) rotateX(10deg);
+    }
+    100%{
+        transform: translate3d(100vw,40vh,-800px) rotateY(5deg) rotateX(10deg);
+    }
+}
+@media  screen and (max-width:580px) {
+    .container-404{
+        width: 100%;
+    }
+    .number{
+        font-size: 100px;
+    }
+    .subtitle{
+        font-size: 20px ;
+        padding: 0 1em;
+    }
+    .moon{
+        width: 100px;
+        height: 100px;
+    }
+    .face{
+        transform: scale(0.7);
+    }
+}
